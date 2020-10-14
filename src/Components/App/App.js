@@ -55,6 +55,8 @@ class App extends React.Component {
         }
         ]
     };
+
+    this.addTrack = this.addTrack.bind(this);
   }
 
   // addTrack not the method used in the help video or recommended.  Go back to step 41 and re-write if below doesn't work.
@@ -80,7 +82,7 @@ class App extends React.Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} />
+            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack()} />
             <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
           </div>
         </div>
