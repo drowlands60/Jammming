@@ -53,40 +53,23 @@ class App extends React.Component {
           album: 'Urban Hymms1',
           id: 31
         }
-        ]
+      ]
+      
     };
 
-    this.addTrack = this.addTrack.bind(this);
+    
+
+    
   }
 
-  // addTrack not the method used in the help video or recommended.  Go back to step 41 and re-write if below doesn't work.
-  addTrack(track){
-      let trackFound = false;
-      for(let i = 0; i<this.state.playlistTracks.lenth; i++){
-        if(this.state.playlistTracks[i].id === track.id) {
-          trackFound = true;
-          break;
-        }
-      };
-      if (!trackFound){
-        this.setState = ({playlistTracks: this.state.playlistTracks.push(track)})
-      };
+  
 
       
-  }
+  
 
-  render(){
+ render(){
     return (
-      <div>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
-        <div className="App">
-          <SearchBar />
-          <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack()} />
-            <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
-          </div>
-        </div>
-      </div>
+      <div></div>
     );
   }
 };
